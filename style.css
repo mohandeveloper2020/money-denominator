@@ -1,0 +1,180 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 36px 40px;
+    width: 100%;
+    max-width: 960px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.45);
+    margin-bottom: 20px;
+    letter-spacing: 0.3px;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(226, 185, 111, 0.15), rgba(226, 185, 111, 0.05));
+    border: 1px solid rgba(226, 185, 111, 0.35);
+    border-radius: 14px;
+    padding: 16px 20px;
+    margin-top: 24px;
+}
+
+.total-label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 0.3px;
+}
+
+.total-value {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #e2b96f;
+    font-variant-numeric: tabular-nums;
+}
+
+.columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.column-header {
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.3);
+    padding-bottom: 4px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 44px 16px 1fr 10px 60px;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 10px 12px;
+    transition: background 0.2s;
+}
+
+.row:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* Indian Rupee note colours */
+.row[data-denom="500"] { background: rgba(115, 110, 100, 0.25); border-color: rgba(115, 110, 100, 0.4); }  /* Stone Grey */
+.row[data-denom="500"]:hover { background: rgba(115, 110, 100, 0.38); }
+
+.row[data-denom="200"] { background: rgba(230, 190, 30, 0.2); border-color: rgba(230, 190, 30, 0.4); }   /* Bright Yellow */
+.row[data-denom="200"]:hover { background: rgba(230, 190, 30, 0.32); }
+
+.row[data-denom="100"] { background: rgba(170, 140, 200, 0.22); border-color: rgba(170, 140, 200, 0.4); } /* Lavender */
+.row[data-denom="100"]:hover { background: rgba(170, 140, 200, 0.35); }
+
+.row[data-denom="50"]  { background: rgba(30, 120, 220, 0.22); border-color: rgba(30, 120, 220, 0.4); }   /* Fluorescent Blue */
+.row[data-denom="50"]:hover  { background: rgba(30, 120, 220, 0.35); }
+
+.row[data-denom="20"]  { background: rgba(160, 200, 40, 0.2); border-color: rgba(160, 200, 40, 0.4); }    /* Greenish-Yellow */
+.row[data-denom="20"]:hover  { background: rgba(160, 200, 40, 0.32); }
+
+.row[data-denom="10"]  { background: rgba(139, 80, 40, 0.25); border-color: rgba(139, 80, 40, 0.45); }    /* Chocolate Brown */
+.row[data-denom="10"]:hover  { background: rgba(139, 80, 40, 0.38); }
+
+.multiply {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.denomination-label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #e2b96f;
+    text-align: right;
+}
+
+.row input[type="number"] {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    padding: 7px 8px;
+    font-size: 0.9rem;
+    color: #ffffff;
+    outline: none;
+    transition: border-color 0.2s, background 0.2s;
+    appearance: none;
+    -moz-appearance: textfield;
+}
+
+.row input[type="number"]::-webkit-inner-spin-button,
+.row input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.row input[type="number"]:focus {
+    border-color: #e2b96f;
+    background: rgba(226, 185, 111, 0.08);
+}
+
+.equals {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.result-value {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

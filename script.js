@@ -7,5 +7,5 @@ const calculateAmount = (value, denomination) => {
     denominations.forEach(denomination => {
         total += parseInt(document.getElementById('result' + denomination).textContent);
     });
-    document.getElementById('total').textContent = total;
+    document.getElementById('total').textContent = '₹ ' + total;
 }
