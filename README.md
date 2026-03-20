@@ -2,7 +2,7 @@
 
 A simple, clean web app to count Indian currency denominations and compute the total amount instantly.
 
-![App Screenshot](app-screenshot.svg)
+![App Screenshot](app-screenshot.png)
 
 ---
 
