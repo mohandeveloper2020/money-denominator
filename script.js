@@ -9,3 +9,19 @@ const calculateAmount = (value, denomination) => {
     });
     document.getElementById('total').textContent = '₹ ' + total;
 }
+
+const resetValues = () => {
+    // Reset all input fields
+    const inputs = document.querySelectorAll('.row input[type="number"]');
+    inputs.forEach(input => {
+        input.value = '';
+    });
+
+    // Reset all result values to 0
+    denominations.forEach(denomination => {
+        document.getElementById('result' + denomination).textContent = '0';
+    });
+
+    // Reset total
+    document.getElementById('total').textContent = '₹ 0';
+}

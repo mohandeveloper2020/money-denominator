@@ -178,3 +178,28 @@ h1 {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+.reset-button {
+    width: 100%;
+    margin-top: 24px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, rgba(226, 185, 111, 0.25), rgba(226, 185, 111, 0.15));
+    border: 2px solid rgba(226, 185, 111, 0.5);
+    border-radius: 12px;
+    color: #e2b96f;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.reset-button:hover {
+    background: linear-gradient(135deg, rgba(226, 185, 111, 0.35), rgba(226, 185, 111, 0.25));
+    border-color: rgba(226, 185, 111, 0.7);
+    box-shadow: 0 8px 20px rgba(226, 185, 111, 0.2);
+}
+
+.reset-button:active {
+    transform: scale(0.98);
+}
