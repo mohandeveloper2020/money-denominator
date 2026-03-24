@@ -180,11 +180,11 @@ h1 {
 }
 
 .reset-button {
-    width: 10%;
+    /* width: 10%; */
     margin-top: 24px;
-    padding: 12px 24px;
+    padding: 6px 10px;
     background: linear-gradient(135deg, rgba(226, 185, 111, 0.25), rgba(226, 185, 111, 0.15));
-    border: 2px solid rgba(226, 185, 111, 0.5);
+    border: 1px solid rgba(226, 185, 111, 0.5);
     border-radius: 12px;
     color: #e2b96f;
     font-size: 1rem;

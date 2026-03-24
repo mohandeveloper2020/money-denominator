@@ -95,7 +95,20 @@
             <span class="total-value" id="total">&#8377; 0</span>
         </div>
 
-        <button class="reset-button" onclick="resetValues()">Reset</button>
+        <button class="reset-button" onclick="resetValues()" aria-label="Reset all values" title="Reset all values">
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.8"
+              className=""
+              style="width: 18px; height: 18px;"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3 12a9 9 0 1 0 3-6.708" />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3 4v5h5" />
+            </svg>
+        </button>
     </div>
 
     <script src="script.js"></script>
